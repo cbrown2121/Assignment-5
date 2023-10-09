@@ -7,9 +7,7 @@ public class Converter {
         // Initialize variables
         String userSelection; // User's menu selection
         String userContinue; // Determines if the loop continues or stops
-        double userInput; // User's metric they would like converted
         
-
         // Begin while loop
         while (true) {
 
@@ -41,8 +39,25 @@ public class Converter {
             System.out.println("******************************************************");
             System.out.println("");
             System.out.print("Please make a selection: "); // Get user Selection
-            userSelection = scanner.nextLine().toUpperCase();
+            userSelection = scanner.nextLine();
             System.out.println("");
+
+            // If statements to run depending on user selection
+            if (userSelection.equals("1")){
+                System.out.println("You selected Kilometers per hour >> Miles per hour.");
+
+            } else if (userSelection.equals("2")) {
+                System.out.println("You selected Kilograms >> Pounds.");
+
+            } else if (userSelection.equals("3")) {
+                System.out.println("You selected Celcious >> Ferinheight.");
+
+            } else if (userSelection.equals("4")) {
+                System.out.println("You selected Feet >> Meters.");
+            } else {
+                System.out.print("Invalid response, please choose from the selection menu. (1,2,3,4)");
+                userSelection = scanner.nextLine();
+            }
         }
     }
 }
