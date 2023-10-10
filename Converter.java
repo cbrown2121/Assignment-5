@@ -8,10 +8,9 @@ public class Converter {
         // Initialize variables
         String userSelection; // User's menu selection
         String userContinue; // Determines if the loop continues or stops
-        double userConversion; // Users value they wish to convert 
         
         // Menu option 1
-        double userFerinheight;
+        double userFahrenheight;
         double userCelsius;
 
         // Menu option 2
@@ -37,9 +36,19 @@ public class Converter {
 
             if (userContinue.equals("Y")) {
                 System.out.println("Loading...");
+                try {
+                    Thread.sleep(2000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
 
             } else if (userContinue.equals("N")) {
-                System.out.println("Exiting");
+                System.out.println("Exiting...");
+                try {
+                    Thread.sleep(2000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
                 break;
 
             } else {
@@ -65,25 +74,54 @@ public class Converter {
             if (userSelection.equals("1")){
                 System.out.println("You selected Miles per hour >> Kilometers per hour.");
                 System.out.print("How many miles per hour would you like to convert to kilometers? ");
-                userConversion = scanner.nextDouble();   
+                userMPH = scanner.nextDouble();
+                userKPH = userMPH * 1.60934;
+                System.out.println(userMPH + " Miles per hour = " + userKPH + " Kilometers per hour.");
+                System.out.println("");
+                try {
+                    Thread.sleep(2000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
 
             // Pounds >> kilograms    
             } else if (userSelection.equals("2")) {
                 System.out.println("You selected Pounds >> Kilograms.");
                 System.out.print("How many pounds do you wish to convert to kilograms? ");
-                userConversion = scanner.nextDouble();
+                userPounds = scanner.nextDouble();
+                userKilograms = userPounds / 2.2046;
+                System.out.println(userPounds + " pounds = " + userKilograms + " kilograms.");
+                try {
+                    Thread.sleep(2000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
 
             // Ferinheight >> Celcious
             } else if (userSelection.equals("3")) {
                 System.out.println("You selected Ferinheight >> Celcious.");
                 System.out.println("How many degrees in ferinheight do you wish to convert to celcius? ");
-                userConversion = scanner.nextDouble();
+                userFahrenheight = scanner.nextDouble();
+                userCelsius = ((userFahrenheight - 32) * 5) / 9;
+                System.out.println(userFahrenheight +" degrees Fahrenheight = " + userCelsius + " degrees Celsius.");
+                try {
+                    Thread.sleep(2000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
 
             // Feet >> meters
             } else if (userSelection.equals("4")) {
                 System.out.println("You selected Feet >> Meters.");
                 System.out.print("How many feet do you wish to convert to meters? ");
-                userConversion = scanner.nextDouble();
+                userFeet = scanner.nextDouble();
+                userMeters = userFeet / 3.28084;
+                System.out.println(userFeet + " Feet = " + userMeters + " Meters.");
+                try {
+                    Thread.sleep(2000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
 
             // Invalid response, get a valid response from user
             } else {
