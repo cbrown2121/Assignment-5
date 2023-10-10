@@ -91,6 +91,7 @@ public class Converter {
                 userPounds = scanner.nextDouble();
                 userKilograms = userPounds / 2.2046;
                 System.out.println(userPounds + " pounds = " + userKilograms + " kilograms.");
+                System.out.println("");
                 try {
                     Thread.sleep(2000);
                 } catch (InterruptedException e) {
@@ -104,6 +105,7 @@ public class Converter {
                 userFahrenheight = scanner.nextDouble();
                 userCelsius = ((userFahrenheight - 32) * 5) / 9;
                 System.out.println(userFahrenheight +" degrees Fahrenheight = " + userCelsius + " degrees Celsius.");
+                System.out.println("");
                 try {
                     Thread.sleep(2000);
                 } catch (InterruptedException e) {
@@ -117,6 +119,7 @@ public class Converter {
                 userFeet = scanner.nextDouble();
                 userMeters = userFeet / 3.28084;
                 System.out.println(userFeet + " Feet = " + userMeters + " Meters.");
+                System.out.println("");
                 try {
                     Thread.sleep(2000);
                 } catch (InterruptedException e) {
